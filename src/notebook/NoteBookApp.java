@@ -56,16 +56,16 @@ public class NoteBookApp {
 
         System.out.println("===============================");
 
-        for (String note : noteBook.getNotes()) {
+        for (Note note : noteBook.getNotes()) {
             System.out.println(note);
         }
 
         // Wir sind böse und manipulieren die geschütze Liste in der Klasse NoteBook
         for (int i = 0; i < noteBook.getNotes().size(); i++) {
-                noteBook.getNotes().set(i, "BlaBlabLa");
+                noteBook.getNotes().set(i, createNewNote("BlaBlabLa"));
         }
 
-        for (String note : noteBook.getNotes()) {
+        for (Note note : noteBook.getNotes()) {
             System.out.println(note);
         }
 
